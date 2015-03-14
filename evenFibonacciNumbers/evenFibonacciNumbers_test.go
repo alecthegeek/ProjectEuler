@@ -1,5 +1,5 @@
 // Breif one line overview of package
-package EvenFibonacciNumbers
+package evenFibonacciNumbers
 
 import "testing"
 import "fmt"
