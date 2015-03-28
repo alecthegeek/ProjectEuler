@@ -15,7 +15,7 @@ func isPalindrone(s string) bool {
 
 func square(n uint) uint { return n * n }
 
-func Problem4(n uint) (product, f1, f2 uint) {
+func Problem4(n uint) (uint, uint, uint) {
 
 	// In n digits the largest base 10 number is 10^n - 1
 	maxFactor := uint(math.Pow10(int(n))) - 1
@@ -23,8 +23,7 @@ func Problem4(n uint) (product, f1, f2 uint) {
 		if isPalindrone(strconv.Itoa(int(i))) {
 			for f1 := uint(math.Sqrt(float64(i))); f1 > 0; f1-- {
 				if i%f1 == 0 {
-					f2 := i / f1
-					if f2 <= maxFactor {
+					if f2 := i / f1; f2 <= maxFactor {
 						return i, f1, f2
 					}
 				}
