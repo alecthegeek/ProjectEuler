@@ -5,6 +5,7 @@ import "fmt"
 
 import (
 	"github.com/alecthegeek/ProjectEuler/evenFibonacciNumbers"
+	"github.com/alecthegeek/ProjectEuler/largestPalindromeProduct"
 	"github.com/alecthegeek/ProjectEuler/largestPrimeFactor"
 	"github.com/alecthegeek/ProjectEuler/multiplesOf3and5"
 )
@@ -19,5 +20,9 @@ func main() {
 
 	fmt.Printf("Running %s: Problem %d  Result is %d\n",
 		"Largest prime factor", 3, largestPrimeFactor.Problem3(600851475143))
+
+	p, f1, f2 := largestPalindromeProduct.Problem4(3)
+	fmt.Printf("Running %s: Problem %d  Result is %v = %v x %v\n",
+		"Largest Palidronic product", 4, p, f1, f2)
 
 }
